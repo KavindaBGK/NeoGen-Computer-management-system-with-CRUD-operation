@@ -1,0 +1,241 @@
+﻿@page
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Computer Shop Home Page</title>
+	<link rel="stylesheet" href="D:\Windows app\NeoGen\NeoGen\wwwroot\css\style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<style type="text/css">
+	body {
+
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+}
+
+header h1 { 
+	float: left;
+	margin: 0;
+	padding: 20px;
+}
+
+nav {
+	float: right;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#showcase {
+	background-image: url(bg.jpg);
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	padding: 120px 0 90px 0;
+}
+
+#showcase h2 {
+	font-size: 48px;
+	margin: 0;
+}
+
+#showcase p {
+	font-size: 24px;
+}
+
+.btn {
+	display: inline-block;
+	background-color: #fff;
+	color: #333;
+	padding: 10px 20px;
+	margin-top: 20px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+#boxes {
+	margin-top: 10px;
+}
+
+.box {
+	display: inline-block;
+	width: 25%;
+	height: 5%;
+	margin: 0 2%;
+	background-color: #f4f4f4;
+	padding: 50px;
+	text-align: center;
+}
+
+.box img {
+	width: 50%;
+	margin-bottom: 20px;
+}
+
+.box h3 {
+	margin: 0;
+}
+
+.box p {
+	font-size: 18px;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px 0
+}
+	
+</style>
+
+<script>
+function checkLogin() {
+  
+    window.open("https://www.google.com/?&bih=754&biw=1490&hl=en");
+}
+</script>
+
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+	<header>
+		<div class="container" style="color:black;">
+			<!--h1 style="color: red; font-size:40px; text-align:left;" >NeoGen</h1><!--h1>Computer Shop</h1-->
+		
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <h1 style="color: red; font-size:40px; text-align:left;" >NeoGen</h1>
+  <div class="container-fluid">
+  <h1 style="color:#f4f4f4; font-size:40px; text-align:left;" >.....</h1>
+    <a class="navbar-brand" href="#" style="margin-top:18px;">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/Laptops" style="margin-top:18px;">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="margin-top:18px;">Categories</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-top:18px;">
+            Products
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/Laptops">Laptops</a></li>
+            <li><a class="dropdown-item" href="#">Desktops</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Accessories</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width:200px; height:50px;  margin-top:18px;">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+		
+      </form>
+    </div>
+  </div>
+  <button type="button" class="btn btn-danger" ><a asp-area="" asp-page="/login" style="color: black;">Login</a></button>
+  <p style="color:#f4f4f4;"> ...</p>
+  <button type="button" class="btn btn-danger" ><a asp-area="" asp-page="/Registration" style="color: black;">Register</a></button>
+  <p style="color:#f4f4f4;"> ....................</p>
+</nav>
+	</header>
+
+	<section id="showcase">
+
+	<img id="slideshow" src="https://wallpapertag.com/wallpaper/full/d/8/5/148003-beautiful-rog-wallpaper-2560x1600-for-1080p.jpg" class="img-fluid" alt="..." style="height:400px; width:1580px;" alt="Slideshow Image">
+    
+    <script>
+      // Define an array of image sources
+      var images = ["https://wallpapertag.com/wallpaper/middle/3/b/8/235396-rog-wallpaper-2560x1440-hd-for-mobile.jpg", "https://c4.wallpaperflare.com/wallpaper/169/732/962/asus-gamer-republic-rog-wallpaper-preview.jpg", "https://c4.wallpaperflare.com/wallpaper/612/867/582/logo-dragon-gaming-msi-wallpaper-preview.jpg", "https://c4.wallpaperflare.com/wallpaper/507/229/82/acer-aspire-computer-desktop-wallpaper-preview.jpg"];
+
+      // Define a variable to keep track of the current image index
+      var currentIndex = 0;
+
+      // Define a function to update the image source
+      function updateImage() {
+        // Get the image element
+        var img = document.getElementById("slideshow");
+        
+        // Set the source to the next image
+        img.src = images[currentIndex];
+        
+        // Increment the current index
+        currentIndex++;
+        
+        // If the index is greater than the last index, reset it to 0
+        if (currentIndex >= images.length) {
+          currentIndex = 0;
+        }
+      }
+      
+      // Call the updateImage function every 5 seconds
+      setInterval(updateImage, 5000);
+    </script>
+
+
+
+
+	<img >
+	
+		<div style="margin-left:20px;" class="container">
+			<h2 style="color:black; font-size:75px; text-align:left;" >Best Place to Buy</h2><h2 style="color:red; font-size:70px;"> Everything.</h2><br>
+			<p style="color:black;" class="fw-light" >At NeoGen, you can shop for all your favorite computer brands,
+laptop products and more at a single place.We offer a wide selection of computers, laptops, and accessories.Our computer shop is a retail store that specializes in selling computer hardware, software, and related accessories. They typically offer a wide range of products, including desktops, laptops, tablets, printers, monitors, and networking equipment. Computer shops may also provide repair services, technical support, and software installation. </p>
+			<button type="button" class="btn btn-danger">Shopping now</button>
+		</div>
+	</section>
+	<div><p class="fs-1" style="font-size:40px; text-align:center;"><B>We Collaborate With 250++ Leading <br>Top Ecommerce and Brands</B></p>
+
+	<section id="boxes" style="padding-left:150px; ">
+		<div class="container">
+			<div class="box" style="height:280px;">
+				<img src="https://png.pngitem.com/pimgs/s/106-1066619_mac-laptop-transparent-background-png-image-free-download.png">
+				<h3>Laptops</h3>
+				<p>Check out our selection of powerful laptops.</p>
+			</div>
+			<div style="padding-top:39px; height:280px;" class="box" >
+				<img src="https://png.pngitem.com/pimgs/s/1-15250_transparent-desktop-monitor-png-desktop-png-png-download.png">
+				<h3>Desktops</h3>
+				<p>Find the perfect desktop for your home or office.</p>
+			</div>
+			
+			<div style="padding-top:50px; height:280px;" class="box" >
+				<img src="https://png.pngitem.com/pimgs/s/407-4079146_transparent-keyboard-vector-png-keyboard-images-black-and.png">
+				<h3>Accessories</h3>
+				<p>Enhance your computer experience with our accessories.</p>
+			</div>
+			
+		</div>
+	</section>
+
+	<footer>
+		<div class="container-fluid">
+			<p>&copy; 2023 - NeoGen - <a asp-area="" asp-page="/Privacy">Privacy</a> </p>
+		</div>
+	</footer>
+</body>
+</html>

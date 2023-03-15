@@ -1,0 +1,113 @@
+﻿@model IEnumerable<NeoGen.Model.Seller>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<header>
+    <div class="container" style="color:black;">
+			<!--h1 style="color: red; font-size:40px; text-align:left;" >NeoGen</h1><!--h1>Computer Shop</h1-->
+		
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <h1 style="color: red; font-size:40px; text-align:left; margin-top:18px;" >NeoGen</h1>
+  <div class="container-fluid">
+  <h1 style="color:#f4f4f4; font-size:40px; text-align:left;" >.....</h1>
+    <a class="navbar-brand" href="https://localhost:44329/" style="margin-top:18px;">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#" style="margin-top:18px;">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="margin-top:18px;">Categories</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-top:18px;">
+            Products
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Laptops</a></li>
+            <li><a class="dropdown-item" href="#">Desktops</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Accessories</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width:200px; height:38px;  margin-top:18px;">
+        <button class="btn btn-outline-success" type="submit" style=" height:35px; margin-top:18px; ">Search</button>
+		
+      </form>
+    </div>
+  </div>
+  
+</nav>
+</header>
+<br>
+<body>
+<h1>Seller's Informations</h1>
+<p>
+    <a href="https://localhost:44329/Sellers/Create">Create New</a>
+    
+</p>
+</body>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCardNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCardNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
